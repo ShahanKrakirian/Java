@@ -33,6 +33,7 @@ public class ProjectClass{
     
     public Object setCost(double cost){
         this.initialCost = cost;
+        return this;
     }
 
     public double getCost(){

@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.inline-block{
+	display: inline-block;
+}
+.orange{
+	background-color: orange;
+	height: 50px;
+	width: 50px;
+}
+.blue{
+	background-color: lightblue;
+	height: 50px;
+	width: 50px;
+}

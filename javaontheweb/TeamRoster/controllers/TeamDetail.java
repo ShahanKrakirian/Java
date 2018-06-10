@@ -32,6 +32,9 @@ public class TeamDetail extends HttpServlet {
 		int index = Integer.parseInt(request.getParameter("team"));
 		Team currTeam = teams.get(index);
 		
+		System.out.println(index);
+		System.out.println(currTeam);
+		
 		request.setAttribute("index", index);
 		request.setAttribute("team", currTeam);
 		

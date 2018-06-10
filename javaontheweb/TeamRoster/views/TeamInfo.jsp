@@ -19,7 +19,7 @@
 			<th>Age</th>
 			<th>Actions</th>
 		</tr>
-		<c:forEach var="player" items="${currTeam.players}" varStatus="idx">
+		<c:forEach var="player" items="${team.players}" varStatus="idx">
 		<tr>
 			<td>${player.first_name}<td>
   			<td>${player.last_name}</td>

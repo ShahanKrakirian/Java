@@ -190,12 +190,19 @@ public class HomeController {
 	}
 	
 	@RequestMapping("/events/{id}")
-	public String eventDetail(@ModelAttribute("messageToAdd") Message message, @PathVariable("id") Long id, Model model) {
+	public String eventDetail(@ModelAttribute("messageToAdd") Message message, @PathVariable("id") Long id, Model model, HttpSession session) {
 		
 		//Get current event 
 		Event currEvent = eventService.findEventById(id);
 		
+		
+		
+		List<User> usersAttending = currEvent.getAttendees();
+		
+		
 		model.addAttribute("currEvent", currEvent);
+		model.addAttribute("usersAttending", usersAttending);
+		model.addAttribute("currUser", userService.findUserById((Long) session.getAttribute("id")));
 		
 		return "/events/eventDetail.jsp";
 	}

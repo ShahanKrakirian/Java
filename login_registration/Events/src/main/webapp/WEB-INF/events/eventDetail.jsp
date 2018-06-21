@@ -34,10 +34,14 @@
 			<th>Name</th>
 			<th>Location</th>
 		</tr>
+		<c:forEach var="user" items="${usersAttending}">
+		<c:if test="${currUser != user}">
 		<tr>
-			<td>Loops here</td>
-			<td>Loops here</td>
+			<td>${user.firstName} ${user.lastName}</td>
+			<td>${user.location}</td>
 		</tr>
+		</c:if>
+		</c:forEach>
 	</table>
 	<br>
 	<h2>Message Wall</h2>
